@@ -29,7 +29,7 @@
       // Event to log token creation
       event TokenCreated(address indexed owner, uint256 tokenId);
 
-      constructor(string memory _name, string memory _symbol, string memory _baseTokenURI) ERC721(_name, _symbol) {
+      constructor(string memory _name, string memory _symbol, string memory _baseTokenURI) ERC721(_name, _symbol) Ownable(msg.sender) {
           baseTokenURI = _baseTokenURI;
       }
 
